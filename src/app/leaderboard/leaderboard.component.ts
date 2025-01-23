@@ -15,7 +15,6 @@ import {PlayerItemComponent} from '../player-item/player-item.component';
     FormsModule,
     NgIf
   ],
-  styleUrl: './leaderboard.component.css'
 })
 export class LeaderboardComponent implements OnInit {
   players: Player[] = []

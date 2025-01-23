@@ -10,7 +10,6 @@ import {LeaderboardService} from '../services/leaderboard-service';
   ],
   templateUrl: './player-item.component.html',
   standalone: true,
-  styleUrl: './player-item.component.css'
 })
 export class PlayerItemComponent implements OnInit {
 

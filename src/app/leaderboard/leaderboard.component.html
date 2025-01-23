@@ -1,0 +1,44 @@
+<div class="mx-auto px-6 py-4 sm:px-6 lg:px-8 ">
+  <div class="mx-auto">
+    <div class="mb-0 space-y-2 rounded-lg p-4 shadow-lg bg-white">
+      <div>
+        <div class="relative">
+          <input
+            [(ngModel)]="playerSlug"
+            type="text"
+            class="w-full rounded-lg border-gray-900 p-4 pe-12 text-sm shadow-sm"
+            placeholder="Michel Polnareff"
+          />
+        </div>
+      </div>
+
+      <button
+        [disabled]="playerSlug === ''"
+        type="submit"
+        (click)="addPlayer()"
+        class="block w-full rounded-lg cursor-pointer disabled:cursor-not-allowed disabled:opacity-75 bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+      >
+        Add player
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="players.length > 0" class="mx-auto px-4 py-4 sm:px-6 lg:px-8 ">
+  <div class="mx-auto">
+    <div class="mb-0 space-y-2 rounded-lg p-4 shadow-lg bg-white">
+      <app-player-item *ngFor="let player of players"
+                       [player]="player"
+                       (playerScoreUpdated)="refreshPlayersList()"
+      />
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="players.length > 0" class="flex justify-center mx-auto mt-6 px-5">
+    <Button (click)="resetTournament()"
+            class="block cursor-pointer w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 ">
+      Reset tournament
+    </Button>
+</div>

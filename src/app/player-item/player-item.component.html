@@ -1,0 +1,16 @@
+<div class="flex w-full py-2 justify-between">
+  <div class="flex flex-col">
+  <p class="font-bold text-indigo-600">{{ player.slug }}</p>
+    <p class="text-sm text-gray-500">{{ player.points }} pts</p>
+  </div>
+  <div class="flex">
+    <input type="number"
+           class="w-full rounded-tl-lg rounded-bl-lg border-gray-900 p-4 pe-12 text-sm shadow-sm"
+           [(ngModel)]="points" value="{{ player.points }}"/>
+    <button class="block w-full cursor-pointer
+    rounded-tr-lg rounded-br-lg
+    bg-gray-200 px-5 py-2 text-sm font-medium text-black hover:bg-gray-300"
+            (click)="updatePoints()">Edit score
+    </button>
+  </div>
+</div>

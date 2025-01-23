@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Player, PlayerResponse} from './models';
 
 const BASE_URL = "http://localhost:8080"
-// should but in env variable but meh
+// should be in env variable but meh
 // const BASE_URL = "https://betclic-leaderboard.ew.r.appspot.com/"
 
 @Injectable({

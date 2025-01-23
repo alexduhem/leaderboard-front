@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Player, PlayerResponse} from './models';
 
-// const BASE_URL = "http://localhost:8080"
-const BASE_URL = "https://betclic-leaderboard.ew.r.appspot.com/"
+const BASE_URL = "http://localhost:8080"
+// should but in env variable but meh
+// const BASE_URL = "https://betclic-leaderboard.ew.r.appspot.com/"
 
 @Injectable({
   providedIn: 'root'
